@@ -178,6 +178,12 @@
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
@@ -303,7 +309,16 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-19 08:26:52 / Modified: 08:31:25" itemprop="dateCreated datePublished" datetime="2020-09-19T08:26:52+08:00">2020-09-19</time>
+              <time title="Created: 2020-09-19 08:26:52 / Modified: 18:18:03" itemprop="dateCreated datePublished" datetime="2020-09-19T08:26:52+08:00">2020-09-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/a/" itemprop="url" rel="index"><span itemprop="name">a</span></a>
+                </span>
             </span>
 
           
@@ -315,8 +330,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <pre><code>           import java.security.Security;</code></pre>
-<p>import java.util.Properties;<br>import javax.mail.Authenticator;<br>import javax.mail.Message;<br>import javax.mail.PasswordAuthentication;<br>import javax.mail.Session;<br>import javax.mail.Transport;<br>import javax.mail.internet.InternetAddress;<br>import javax.mail.internet.MimeMessage;<br>import com.sun.net.ssl.internal.ssl.Provider;<br>public class Mail {<br>    public static void main(String[] args) {<br>        try {<br>            //设置SSL连接、邮件环境<br>            Security.addProvider(new Provider());<br>            final String SSL_FACTORY = “javax.net.ssl.SSLSocketFactory”;</p>
+          <p>import java.security.Security;<br>import java.util.Properties;<br>import javax.mail.Authenticator;<br>import javax.mail.Message;<br>import javax.mail.PasswordAuthentication;<br>import javax.mail.Session;<br>import javax.mail.Transport;<br>import javax.mail.internet.InternetAddress;<br>import javax.mail.internet.MimeMessage;<br>import com.sun.net.ssl.internal.ssl.Provider;<br>public class Mail {<br>    public static void main(String[] args) {<br>        try {<br>            //设置SSL连接、邮件环境<br>            Security.addProvider(new Provider());<br>            final String SSL_FACTORY = “javax.net.ssl.SSLSocketFactory”;</p>
 <pre><code>        //配置邮箱信息
         Properties props = System.getProperties();
         //邮件服务器
