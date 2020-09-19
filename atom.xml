@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-09-19T10:30:52.081Z</updated>
+  <updated>2020-09-19T10:33:59.265Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2020/09/19/xiao/"/>
     <id>http://example.com/2020/09/19/xiao/</id>
     <published>2020-09-19T00:53:49.000Z</published>
-    <updated>2020-09-19T10:30:52.081Z</updated>
+    <updated>2020-09-19T10:33:59.265Z</updated>
     
     <content type="html"><![CDATA[<p>筱  xiao<br>    箭属。小竹也。释草曰。筱，箭。周礼注曰。箭，筱也。<br>二京赋解曰。筱，箭竹也。此云箭属。小异。从竹。攸声。先杳切。</p>]]></content>
     
@@ -44,7 +44,7 @@
     <link href="http://example.com/2020/09/19/qionglou/"/>
     <id>http://example.com/2020/09/19/qionglou/</id>
     <published>2020-09-19T00:26:52.000Z</published>
-    <updated>2020-09-19T10:30:55.358Z</updated>
+    <updated>2020-09-19T10:33:52.545Z</updated>
     
     <content type="html"><![CDATA[<p>import java.security.Security;<br>import java.util.Properties;<br>import javax.mail.Authenticator;<br>import javax.mail.Message;<br>import javax.mail.PasswordAuthentication;<br>import javax.mail.Session;<br>import javax.mail.Transport;<br>import javax.mail.internet.InternetAddress;<br>import javax.mail.internet.MimeMessage;<br>import com.sun.net.ssl.internal.ssl.Provider;<br>public class Mail {<br>    public static void main(String[] args) {<br>        try {<br>            //设置SSL连接、邮件环境<br>            Security.addProvider(new Provider());<br>            final String SSL_FACTORY = “javax.net.ssl.SSLSocketFactory”;</p><pre><code>        //配置邮箱信息        Properties props = System.getProperties();        //邮件服务器        props.setProperty(&quot;mail.smtp.host&quot;, &quot;smtp.qq.com&quot;);        props.setProperty(&quot;mail.smtp.socketFactory.class&quot;, SSL_FACTORY);        props.setProperty(&quot;mail.smtp.socketFactory.fallback&quot;, &quot;false&quot;);        //邮件服务器端口        props.setProperty(&quot;mail.smtp.port&quot;, &quot;465&quot;);        props.setProperty(&quot;mail.smtp.socketFactory.port&quot;, &quot;465&quot;);        //鉴权信息        props.setProperty(&quot;mail.smtp.auth&quot;, &quot;true&quot;);        //建立邮件会话        Session session = Session.getDefaultInstance(props, new Authenticator() &#123;            //身份认证            protected PasswordAuthentication getPasswordAuthentication() &#123;                //1.账户 授权码                return new PasswordAuthentication(&quot;2308579924@qq.com&quot;, &quot;zdldrdjozrfxecba&quot;);            &#125;        &#125;);        //建立邮件对象        MimeMessage message = new MimeMessage(session);        //设置邮件的发件人        message.setFrom(new InternetAddress(&quot;2308579924@qq.com&quot;));        //2.设置邮件的收件人        message.setRecipients(Message.RecipientType.TO, &quot;2308579924@qq.com&quot;);        //设置邮件的主题        message.setSubject(&quot;优课达&quot;);        //文本部分        message.setContent(&quot;HELLOWORLD&quot;, &quot;text/html;charset=UTF-8&quot;);        message.saveChanges();        //发送邮件        Transport.send(message);        System.out.println(&quot;发送成功&quot;);    &#125; catch (Exception e) &#123;        e.printStackTrace();    &#125;&#125;</code></pre><p>}</p>]]></content>
     
