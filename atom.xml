@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>鲸钰</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://shenmeyemeiyou.com/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://shenmeyemeiyou.com/"/>
   <updated>2020-09-19T00:55:29.718Z</updated>
-  <id>http://example.com/</id>
+  <id>http://shenmeyemeiyou.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Li Xuhui</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>xiao</title>
-    <link href="http://example.com/2020/09/19/xiao/"/>
-    <id>http://example.com/2020/09/19/xiao/</id>
+    <link href="http://shenmeyemeiyou.com/2020/09/19/xiao/"/>
+    <id>http://shenmeyemeiyou.com/2020/09/19/xiao/</id>
     <published>2020-09-19T00:53:49.000Z</published>
     <updated>2020-09-19T00:55:29.718Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>qionglou</title>
-    <link href="http://example.com/2020/09/19/qionglou/"/>
-    <id>http://example.com/2020/09/19/qionglou/</id>
+    <link href="http://shenmeyemeiyou.com/2020/09/19/qionglou/"/>
+    <id>http://shenmeyemeiyou.com/2020/09/19/qionglou/</id>
     <published>2020-09-19T00:26:52.000Z</published>
     <updated>2020-09-19T00:31:25.560Z</updated>
     
