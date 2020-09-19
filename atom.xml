@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-09-19T00:55:29.718Z</updated>
+  <updated>2020-09-19T10:10:47.549Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2020/09/19/xiao/"/>
     <id>http://example.com/2020/09/19/xiao/</id>
     <published>2020-09-19T00:53:49.000Z</published>
-    <updated>2020-09-19T00:55:29.718Z</updated>
+    <updated>2020-09-19T10:10:47.549Z</updated>
     
     <content type="html"><![CDATA[<p>筱  xiao<br>    箭属。小竹也。释草曰。筱，箭。周礼注曰。箭，筱也。<br>二京赋解曰。筱，箭竹也。此云箭属。小异。从竹。攸声。先杳切。</p>]]></content>
     
@@ -34,6 +34,12 @@
     
     
     
+    
+    <category term="1" scheme="http://example.com/tags/1/"/>
+    
+    <category term="2" scheme="http://example.com/tags/2/"/>
+    
+    <category term="3" scheme="http://example.com/tags/3/"/>
     
   </entry>
   
