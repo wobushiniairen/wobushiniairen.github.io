@@ -7,15 +7,15 @@
   
   <title>qionglou | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="6">
+  <meta name="description" content="import java.security.Security; import java.util.Properties;import javax.mail.Authenticator;import javax.mail.Message;import javax.mail.PasswordAuthentication;import javax.mail.Session;impor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="qionglou">
 <meta property="og:url" content="http://example.com/2020/09/19/qionglou/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="6">
+<meta property="og:description" content="import java.security.Security; import java.util.Properties;import javax.mail.Authenticator;import javax.mail.Message;import javax.mail.PasswordAuthentication;import javax.mail.Session;impor">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-19T00:26:52.000Z">
-<meta property="article:modified_time" content="2020-09-19T00:27:38.581Z">
+<meta property="article:modified_time" content="2020-09-19T00:31:25.560Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -88,12 +88,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>6</p>
+        <pre><code>           import java.security.Security;</code></pre>
+<p>import java.util.Properties;<br>import javax.mail.Authenticator;<br>import javax.mail.Message;<br>import javax.mail.PasswordAuthentication;<br>import javax.mail.Session;<br>import javax.mail.Transport;<br>import javax.mail.internet.InternetAddress;<br>import javax.mail.internet.MimeMessage;<br>import com.sun.net.ssl.internal.ssl.Provider;<br>public class Mail {<br>    public static void main(String[] args) {<br>        try {<br>            //设置SSL连接、邮件环境<br>            Security.addProvider(new Provider());<br>            final String SSL_FACTORY = “javax.net.ssl.SSLSocketFactory”;</p>
+<pre><code>        //配置邮箱信息
+        Properties props = System.getProperties();
+        //邮件服务器
+        props.setProperty(&quot;mail.smtp.host&quot;, &quot;smtp.qq.com&quot;);
+        props.setProperty(&quot;mail.smtp.socketFactory.class&quot;, SSL_FACTORY);
+        props.setProperty(&quot;mail.smtp.socketFactory.fallback&quot;, &quot;false&quot;);
+        //邮件服务器端口
+        props.setProperty(&quot;mail.smtp.port&quot;, &quot;465&quot;);
+        props.setProperty(&quot;mail.smtp.socketFactory.port&quot;, &quot;465&quot;);
+        //鉴权信息
+        props.setProperty(&quot;mail.smtp.auth&quot;, &quot;true&quot;);
+        //建立邮件会话
+        Session session = Session.getDefaultInstance(props, new Authenticator() &#123;
+            //身份认证
+            protected PasswordAuthentication getPasswordAuthentication() &#123;
+                //1.账户 授权码
+                return new PasswordAuthentication(&quot;2308579924@qq.com&quot;, &quot;zdldrdjozrfxecba&quot;);
+            &#125;
+        &#125;);
+        //建立邮件对象
+        MimeMessage message = new MimeMessage(session);
+        //设置邮件的发件人
+        message.setFrom(new InternetAddress(&quot;2308579924@qq.com&quot;));
+        //2.设置邮件的收件人
+        message.setRecipients(Message.RecipientType.TO, &quot;2308579924@qq.com&quot;);
+        //设置邮件的主题
+        message.setSubject(&quot;优课达&quot;);
+        //文本部分
+        message.setContent(&quot;HELLOWORLD&quot;, &quot;text/html;charset=UTF-8&quot;);
+        message.saveChanges();
+        //发送邮件
+        Transport.send(message);
+        System.out.println(&quot;发送成功&quot;);
+    &#125; catch (Exception e) &#123;
+        e.printStackTrace();
+    &#125;
+&#125;</code></pre>
+<p>}</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/19/qionglou/" data-id="ckf8xnyq70000y8vl8kmf3rs3" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/19/qionglou/" data-id="ckf8xstls0000l8vlhvt8584s" class="article-share-link">Share</a>
       
       
     </footer>
