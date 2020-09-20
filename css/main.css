@@ -2819,7 +2819,11 @@ body {
   background-size: cover;
 }
 .header-inner {
-  background: url("/imgs/back.jpg");
+  background: url("/imgs/avaer.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 .sidebar {
   transition-duration: 0.4s;
