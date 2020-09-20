@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-09-20T09:26:44.628Z</updated>
+  <updated>2020-09-20T11:08:50.498Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人物图片</title>
+    <link href="http://example.com/2020/09/20/dayph/"/>
+    <id>http://example.com/2020/09/20/dayph/</id>
+    <published>2020-09-20T11:03:27.000Z</published>
+    <updated>2020-09-20T11:08:50.498Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://browser9.qhimg.com/bdm/768_474_0/t01039b44f7c7ca5ca3.jpg" alt="tu"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;http://browser9.qhimg.com/bdm/768_474_0/t01039b44f7c7ca5ca3.jpg&quot; alt=&quot;tu&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="图片" scheme="http://example.com/category/%E5%9B%BE%E7%89%87/"/>
+    
+    
+    <category term="人物" scheme="http://example.com/tag/%E4%BA%BA%E7%89%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>一对一客户机服务器</title>
