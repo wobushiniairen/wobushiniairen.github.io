@@ -195,7 +195,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -206,7 +206,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tag/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -253,6 +253,129 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/20/webholle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/avaer.gif">
+      <meta itemprop="name" content="李Hunk">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鲸钰">
+    </span>
+
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/20/webholle/" class="post-title-link" itemprop="url">webholle</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-09-20 16:52:37 / Modified: 17:05:32" itemprop="dateCreated datePublished" datetime="2020-09-20T16:52:37+08:00">2020-09-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.BufferedWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.io.OutputStreamWriter;</span><br><span class="line">import java.net.InetSocketAddress;</span><br><span class="line">import java.net.ServerSocket;</span><br><span class="line">import java.net.Socket;</span><br><span class="line">import java.net.SocketAddress;</span><br><span class="line"></span><br><span class="line">public class EchoServer &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F;1.启动服务器</span><br><span class="line">        ServerSocket listenSocket &#x3D; null;</span><br><span class="line">        Socket clientSocket &#x3D; null;</span><br><span class="line">        BufferedReader in &#x3D; null;</span><br><span class="line">        BufferedWriter out &#x3D; null;</span><br><span class="line">        try &#123;</span><br><span class="line">            listenSocket &#x3D; new ServerSocket();</span><br><span class="line">            SocketAddress serverAddr&#x3D;new InetSocketAddress(&quot;localhost&quot;,5000);</span><br><span class="line">            listenSocket.bind(serverAddr);</span><br><span class="line">            System.out.println(&quot;1.服务器启动成功！开始在localhost的5000端口侦听连接...&quot;);</span><br><span class="line">            &#x2F;&#x2F;2.处理连接                      </span><br><span class="line">            clientSocket &#x3D; listenSocket.accept();</span><br><span class="line">            System.out.println(&quot;2.客户机连接成功！客户机地址和端口：&quot;+clientSocket.getRemoteSocketAddress());</span><br><span class="line">            &#x2F;&#x2F;3.与客户机会话           </span><br><span class="line">            in &#x3D; new BufferedReader(</span><br><span class="line">                    new InputStreamReader(</span><br><span class="line">                            clientSocket.getInputStream()));</span><br><span class="line">            out &#x3D; new BufferedWriter(</span><br><span class="line">                    new OutputStreamWriter(</span><br><span class="line">                            clientSocket.getOutputStream()));</span><br><span class="line">            String recvStr&#x3D;in.readLine();  &#x2F;&#x2F;从客户机接收字符串</span><br><span class="line">            System.out.println(&quot;3.1 服务器收到字符串：&quot;+recvStr);</span><br><span class="line">            out.write(recvStr);  &#x2F;&#x2F;向客户机回送字符串           </span><br><span class="line">            out.newLine();</span><br><span class="line">            out.flush();</span><br><span class="line">            System.out.println(&quot;3.2 服务器回送字符串成功：&quot;+recvStr);</span><br><span class="line">        &#125; catch (IOException ex) &#123;</span><br><span class="line">            System.out.println(&quot;异常信息：&quot;+ex.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;4.关闭套接字和流</span><br><span class="line">        try &#123;</span><br><span class="line">            if (in !&#x3D; null)in.close();</span><br><span class="line">            if (out !&#x3D; null)  out.close();</span><br><span class="line">            if (listenSocket !&#x3D; null)   listenSocket.close();</span><br><span class="line">            if (clientSocket !&#x3D; null)   clientSocket.close();</span><br><span class="line">            System.out.println(&quot;4.关闭套接字和流成功！&quot;);</span><br><span class="line">        &#125; catch (IOException ex) &#123;</span><br><span class="line">            System.out.println(&quot;异常信息&quot;+ex.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<pre><code>![](../imgs/服务器.png)</code></pre>
+<hr>
+<pre><code>import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.SocketAddress;
+
+public class EchoClient &#123;
+
+    public static void main(String[] args) &#123;
+        Socket clientSocket = null;
+        BufferedReader in = null;
+        BufferedWriter out = null;
+        try &#123;
+            //1.创建客户机套接字
+            clientSocket = new Socket();
+            SocketAddress remoteAddr=new InetSocketAddress(&quot;localhost&quot;,5000);
+            System.out.println(&quot;1.创建客户机套接字成功！&quot;);
+            //2.连接服务器
+            clientSocket.connect(remoteAddr);
+            System.out.println(&quot;2.客户机连接服务器localhost端口5000成功！&quot;);
+            System.out.println(&quot;客户机使用的地址和端口：&quot;+clientSocket.getLocalSocketAddress());
+            //与服务器会话           
+            in = new BufferedReader(
+                    new InputStreamReader(
+                            clientSocket.getInputStream()));
+            out = new BufferedWriter(
+                    new OutputStreamWriter(
+                            clientSocket.getOutputStream()));
+            String sendStr=&quot;有朋自远方来&quot;;
+            out.write(sendStr);  //向服务器发送字符串
+            out.newLine();
+            out.flush();
+            System.out.println(&quot;3.1向服务器发送字符串成功!&quot;+sendStr);
+            String recvStr=in.readLine();  //从服务器接收字符串 
+            System.out.println(&quot;3.2从服务器接收回送字符串成功！&quot;+recvStr);
+        &#125; catch (IOException ex) &#123;
+            System.out.println(&quot;异常信息：&quot;+ex.getMessage());
+        &#125;
+        //关闭套接字和流
+        try &#123;
+            if (in != null) in.close();
+            if (out != null)  out.close();
+            if (clientSocket != null)   clientSocket.close();
+            System.out.println(&quot;4.关闭套接字和流成功！&quot;);
+        &#125; catch (IOException ex) &#123;
+            System.out.println(&quot;异常信息：&quot;+ex.getMessage());
+        &#125;
+    &#125;
+&#125;
+```![](../imgs/客户.png)</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/19/xiao/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -278,10 +401,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-09-19 08:53:49 / Modified: 21:28:15" itemprop="dateCreated datePublished" datetime="2020-09-19T08:53:49+08:00">2020-09-19</time>
+              <time title="Created: 2020-09-19 08:53:49" itemprop="dateCreated datePublished" datetime="2020-09-19T08:53:49+08:00">2020-09-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-20 17:05:43" itemprop="dateModified" datetime="2020-09-20T17:05:43+08:00">2020-09-20</time>
+              </span>
 
           
 
@@ -337,10 +466,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-09-19 08:26:52 / Modified: 21:28:13" itemprop="dateCreated datePublished" datetime="2020-09-19T08:26:52+08:00">2020-09-19</time>
+              <time title="Created: 2020-09-19 08:26:52" itemprop="dateCreated datePublished" datetime="2020-09-19T08:26:52+08:00">2020-09-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-20 17:05:40" itemprop="dateModified" datetime="2020-09-20T17:05:40+08:00">2020-09-20</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -360,46 +495,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>import java.security.Security;<br>import java.util.Properties;<br>import javax.mail.Authenticator;<br>import javax.mail.Message;<br>import javax.mail.PasswordAuthentication;<br>import javax.mail.Session;<br>import javax.mail.Transport;<br>import javax.mail.internet.InternetAddress;<br>import javax.mail.internet.MimeMessage;<br>import com.sun.net.ssl.internal.ssl.Provider;<br>public class Mail {<br>    public static void main(String[] args) {<br>        try {<br>            //设置SSL连接、邮件环境<br>            Security.addProvider(new Provider());<br>            final String SSL_FACTORY = “javax.net.ssl.SSLSocketFactory”;</p>
-<pre><code>        //配置邮箱信息
-        Properties props = System.getProperties();
-        //邮件服务器
-        props.setProperty(&quot;mail.smtp.host&quot;, &quot;smtp.qq.com&quot;);
-        props.setProperty(&quot;mail.smtp.socketFactory.class&quot;, SSL_FACTORY);
-        props.setProperty(&quot;mail.smtp.socketFactory.fallback&quot;, &quot;false&quot;);
-        //邮件服务器端口
-        props.setProperty(&quot;mail.smtp.port&quot;, &quot;465&quot;);
-        props.setProperty(&quot;mail.smtp.socketFactory.port&quot;, &quot;465&quot;);
-        //鉴权信息
-        props.setProperty(&quot;mail.smtp.auth&quot;, &quot;true&quot;);
-        //建立邮件会话
-        Session session = Session.getDefaultInstance(props, new Authenticator() &#123;
-            //身份认证
-            protected PasswordAuthentication getPasswordAuthentication() &#123;
-                //1.账户 授权码
-                return new PasswordAuthentication(&quot;2308579924@qq.com&quot;, &quot;zdldrdjozrfxecba&quot;);
-            &#125;
-        &#125;);
-        //建立邮件对象
-        MimeMessage message = new MimeMessage(session);
-        //设置邮件的发件人
-        message.setFrom(new InternetAddress(&quot;2308579924@qq.com&quot;));
-        //2.设置邮件的收件人
-        message.setRecipients(Message.RecipientType.TO, &quot;2308579924@qq.com&quot;);
-        //设置邮件的主题
-        message.setSubject(&quot;优课达&quot;);
-        //文本部分
-        message.setContent(&quot;HELLOWORLD&quot;, &quot;text/html;charset=UTF-8&quot;);
-        message.saveChanges();
-        //发送邮件
-        Transport.send(message);
-        System.out.println(&quot;发送成功&quot;);
-    &#125; catch (Exception e) &#123;
-        e.printStackTrace();
-    &#125;
-&#125;</code></pre>
-<p>}</p>
-
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.security.Security;</span><br><span class="line">import java.util.Properties;</span><br><span class="line">import javax.mail.Authenticator;</span><br><span class="line">import javax.mail.Message;</span><br><span class="line">import javax.mail.PasswordAuthentication;</span><br><span class="line">import javax.mail.Session;</span><br><span class="line">import javax.mail.Transport;</span><br><span class="line">import javax.mail.internet.InternetAddress;</span><br><span class="line">import javax.mail.internet.MimeMessage;</span><br><span class="line">import com.sun.net.ssl.internal.ssl.Provider;</span><br><span class="line">public class Mail &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            &#x2F;&#x2F;设置SSL连接、邮件环境</span><br><span class="line">            Security.addProvider(new Provider());</span><br><span class="line">            final String SSL_FACTORY &#x3D; &quot;javax.net.ssl.SSLSocketFactory&quot;;</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F;配置邮箱信息</span><br><span class="line">            Properties props &#x3D; System.getProperties();</span><br><span class="line">            &#x2F;&#x2F;邮件服务器</span><br><span class="line">            props.setProperty(&quot;mail.smtp.host&quot;, &quot;smtp.qq.com&quot;);</span><br><span class="line">            props.setProperty(&quot;mail.smtp.socketFactory.class&quot;, SSL_FACTORY);</span><br><span class="line">            props.setProperty(&quot;mail.smtp.socketFactory.fallback&quot;, &quot;false&quot;);</span><br><span class="line">            &#x2F;&#x2F;邮件服务器端口</span><br><span class="line">            props.setProperty(&quot;mail.smtp.port&quot;, &quot;465&quot;);</span><br><span class="line">            props.setProperty(&quot;mail.smtp.socketFactory.port&quot;, &quot;465&quot;);</span><br><span class="line">            &#x2F;&#x2F;鉴权信息</span><br><span class="line">            props.setProperty(&quot;mail.smtp.auth&quot;, &quot;true&quot;);</span><br><span class="line">            &#x2F;&#x2F;建立邮件会话</span><br><span class="line">            Session session &#x3D; Session.getDefaultInstance(props, new Authenticator() &#123;</span><br><span class="line">                &#x2F;&#x2F;身份认证</span><br><span class="line">                protected PasswordAuthentication getPasswordAuthentication() &#123;</span><br><span class="line">                    &#x2F;&#x2F;1.账户 授权码</span><br><span class="line">                    return new PasswordAuthentication(&quot;2308579924@qq.com&quot;, &quot;zdldrdjozrfxecba&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            &#x2F;&#x2F;建立邮件对象</span><br><span class="line">            MimeMessage message &#x3D; new MimeMessage(session);</span><br><span class="line">            &#x2F;&#x2F;设置邮件的发件人</span><br><span class="line">            message.setFrom(new InternetAddress(&quot;2308579924@qq.com&quot;));</span><br><span class="line">            &#x2F;&#x2F;2.设置邮件的收件人</span><br><span class="line">            message.setRecipients(Message.RecipientType.TO, &quot;2308579924@qq.com&quot;);</span><br><span class="line">            &#x2F;&#x2F;设置邮件的主题</span><br><span class="line">            message.setSubject(&quot;优课达&quot;);</span><br><span class="line">            &#x2F;&#x2F;文本部分</span><br><span class="line">            message.setContent(&quot;HELLOWORLD&quot;, &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;);</span><br><span class="line">            message.saveChanges();</span><br><span class="line">            &#x2F;&#x2F;发送邮件</span><br><span class="line">            Transport.send(message);</span><br><span class="line">            System.out.println(&quot;发送成功&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
