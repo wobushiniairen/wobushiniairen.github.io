@@ -2707,9 +2707,12 @@ body {
   background-position: 50% 50%;
   background-size: cover;
 }
+.header-inner {
+  background: #ffc0cb;
+}
 .sidebar {
   transition-duration: 0.4s;
-  opacity: 0.8;
+  opacity: 1;
 }
 .posts-expand .post-title-link {
   color: #222;
