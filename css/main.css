@@ -2819,7 +2819,7 @@ body {
   background-size: cover;
 }
 .header-inner {
-  background: #98f5ff;
+  background: url("/imgs/back.jpg");
 }
 .sidebar {
   transition-duration: 0.4s;
