@@ -2820,9 +2820,6 @@ body {
 }
 .header-inner {
   background: url("/imgs/avaer.gif");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
   background-size: cover;
 }
 .sidebar {
