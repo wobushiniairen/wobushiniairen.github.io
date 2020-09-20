@@ -2702,8 +2702,21 @@ ul.breadcrumb li + li:last-child {
 }
 body {
   background: url("/imgs/back.jpg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
+}
+.sidebar {
+  transition-duration: 0.4s;
+  opacity: 0.8;
+}
+.posts-expand .post-title-link {
+  color: #222;
+}
+.post-block {
+  background: #fff;
+  border-radius: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  padding: 40px;
 }
