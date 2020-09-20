@@ -2701,7 +2701,7 @@ ul.breadcrumb li + li:last-child {
   border-radius: 4px;
 }
 body {
-  background: url("/imgs/7.jpg");
+  background: url("/imgs/back.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
