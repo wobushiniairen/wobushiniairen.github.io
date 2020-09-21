@@ -2820,7 +2820,6 @@ body {
 }
 .header-inner {
   background: url("/imgs/sbg.jpg");
-  background-size: cover;
 }
 .sidebar {
   transition-duration: 0.4s;
