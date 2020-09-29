@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="客户端 &#96;&#96;&#96;javaimport java.io.*;import java.net.Socket; public class LoginClient{    public static void main(String[] args) throws Exception {        System.out.println(“客户启动中…”);        BufferedReader co">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071客户端import java.io.*;import java.net.Socket;public class LoginClient">
 <meta property="og:type" content="article">
 <meta property="og:title" content="带登陆验证TCP（简易版）">
 <meta property="og:url" content="http://example.com/2020/09/29/daima-1/index.html">
 <meta property="og:site_name" content="鲸钰">
-<meta property="og:description" content="客户端 &#96;&#96;&#96;javaimport java.io.*;import java.net.Socket; public class LoginClient{    public static void main(String[] args) throws Exception {        System.out.println(“客户启动中…”);        BufferedReader co">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071客户端import java.io.*;import java.net.Socket;public class LoginClient">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-09-29T13:18:32.697Z">
-<meta property="article:modified_time" content="2020-09-29T13:22:36.609Z">
+<meta property="article:modified_time" content="2020-09-29T13:31:48.380Z">
 <meta property="article:author" content="李Hunk">
 <meta property="article:tag" content="代码">
 <meta name="twitter:card" content="summary">
@@ -202,7 +202,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -214,7 +214,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">}</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -324,7 +323,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-29 21:18:32 / Modified: 21:22:36" itemprop="dateCreated datePublished" datetime="2020-09-29T21:18:32+08:00">2020-09-29</time>
+              <time title="Created: 2020-09-29 21:18:32 / Modified: 21:31:48" itemprop="dateCreated datePublished" datetime="2020-09-29T21:18:32+08:00">2020-09-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -373,53 +372,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>客户端</p>
-<p>```java<br>import java.io.*;<br>import java.net.Socket;</p>
-<p>public class LoginClient{<br>    public static void main(String[] args) throws Exception {<br>        System.out.println(“客户启动中…”);<br>        BufferedReader console =new BufferedReader(new InputStreamReader(System.in));<br>        System.out.print(“输入用户名:”);<br>        String username=console.readLine();<br>        System.out.print(“输入密码:”);<br>        String password=console.readLine();</p>
-<a id="more"></a>
-<pre><code>    Socket socket=new Socket(&quot;localhost&quot;,10001);
-
-    DataOutputStream writer=new DataOutputStream(socket.getOutputStream());
-    DataInputStream reader =new DataInputStream(socket.getInputStream());
-
-    writer.writeUTF(&quot;username=&quot;+username+&quot;&amp;password=&quot;+password);
-    writer.flush();
-    String msg=reader.readUTF();
-    System.out.println(msg);
-    reader.close();
-    writer.close();
-    socket.close();
-&#125;</code></pre>
-<h2 id><a href="#" class="headerlink" title="}"></a>}</h2><p>服务器端<br>import java.io.DataInputStream;<br>import java.io.DataOutputStream;<br>import java.io.IOException;<br>import java.net.ServerSocket;<br>import java.net.Socket;</p>
-<p>public class LoginServer{<br>    public static void main(String[] args) throws IOException {<br>        System.out.println(“服务器启动中…”);<br>        ServerSocket server=new ServerSocket(10001);<br>        boolean flog=true;<br>        while(flog) {<br>            Socket socket = server.accept();<br>            System.out.println(“客户端连接成功！”);</p>
-<pre><code>        DataInputStream reader = new DataInputStream(socket.getInputStream());
-        DataOutputStream writer = new DataOutputStream(socket.getOutputStream());
-        String data = reader.readUTF();
-        String username = &quot; &quot;;
-        String password = &quot; &quot;;
-
-        String[] datas = data.split(&quot;&amp;&quot;);
-        for (String str : datas) &#123;
-            String[] strs = str.split(&quot;=&quot;);
-            if (&quot;username&quot;.equals(strs[0])) &#123;
-                username = strs[1];
-            &#125; else if (&quot;password&quot;.equals(strs[0])) &#123;
-                password = strs[1];
-            &#125;
-        &#125;
-        if (&quot;admin&quot;.equals(username) &amp;&amp; &quot;admin&quot;.equals(password)) &#123;
-            writer.writeUTF(&quot;欢迎光临&quot;);
-        &#125; else &#123;
-            writer.writeUTF(&quot;用户不存在！&quot;);
-        &#125;
-        writer.flush();
-        writer.close();
-        socket.close();
-    &#125;
-    server.close();
-&#125;</code></pre>
-<p>}</p>
-
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">客户端</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginClient</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;客户启动中...&quot;</span>);</span><br><span class="line">        BufferedReader console =<span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">        System.out.print(<span class="string">&quot;输入用户名:&quot;</span>);</span><br><span class="line">        String username=console.readLine();</span><br><span class="line">        System.out.print(<span class="string">&quot;输入密码:&quot;</span>);</span><br><span class="line">        String password=console.readLine();</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">        Socket socket=<span class="keyword">new</span> Socket(<span class="string">&quot;localhost&quot;</span>,<span class="number">10001</span>);</span><br><span class="line"></span><br><span class="line">        DataOutputStream writer=<span class="keyword">new</span> DataOutputStream(socket.getOutputStream());</span><br><span class="line">        DataInputStream reader =<span class="keyword">new</span> DataInputStream(socket.getInputStream());</span><br><span class="line"></span><br><span class="line">        writer.writeUTF(<span class="string">&quot;username=&quot;</span>+username+<span class="string">&quot;&amp;password=&quot;</span>+password);</span><br><span class="line">        writer.flush();</span><br><span class="line">        String msg=reader.readUTF();</span><br><span class="line">        System.out.println(msg);</span><br><span class="line">        reader.close();</span><br><span class="line">        writer.close();</span><br><span class="line">        socket.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">---</span><br><span class="line">服务器端</span><br><span class="line"><span class="keyword">import</span> java.io.DataInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.DataOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.ServerSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginServer</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;服务器启动中...&quot;</span>);</span><br><span class="line">        ServerSocket server=<span class="keyword">new</span> ServerSocket(<span class="number">10001</span>);</span><br><span class="line">        <span class="keyword">boolean</span> flog=<span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">while</span>(flog) &#123;</span><br><span class="line">            Socket socket = server.accept();</span><br><span class="line">            System.out.println(<span class="string">&quot;客户端连接成功！&quot;</span>);</span><br><span class="line"></span><br><span class="line">            DataInputStream reader = <span class="keyword">new</span> DataInputStream(socket.getInputStream());</span><br><span class="line">            DataOutputStream writer = <span class="keyword">new</span> DataOutputStream(socket.getOutputStream());</span><br><span class="line">            String data = reader.readUTF();</span><br><span class="line">            String username = <span class="string">&quot; &quot;</span>;</span><br><span class="line">            String password = <span class="string">&quot; &quot;</span>;</span><br><span class="line"></span><br><span class="line">            String[] datas = data.split(<span class="string">&quot;&amp;&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (String str : datas) &#123;</span><br><span class="line">                String[] strs = str.split(<span class="string">&quot;=&quot;</span>);</span><br><span class="line">                <span class="keyword">if</span> (<span class="string">&quot;username&quot;</span>.equals(strs[<span class="number">0</span>])) &#123;</span><br><span class="line">                    username = strs[<span class="number">1</span>];</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;password&quot;</span>.equals(strs[<span class="number">0</span>])) &#123;</span><br><span class="line">                    password = strs[<span class="number">1</span>];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (<span class="string">&quot;admin&quot;</span>.equals(username) &amp;&amp; <span class="string">&quot;admin&quot;</span>.equals(password)) &#123;</span><br><span class="line">                writer.writeUTF(<span class="string">&quot;欢迎光临&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                writer.writeUTF(<span class="string">&quot;用户不存在！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            writer.flush();</span><br><span class="line">            writer.close();</span><br><span class="line">            socket.close();</span><br><span class="line">        &#125;</span><br><span class="line">        server.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     

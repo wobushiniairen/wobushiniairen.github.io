@@ -30,7 +30,21 @@
   </url>
   
   <url>
+    <loc>http://example.com/2020/09/19/xiao/</loc>
+    
+    <lastmod>2020-09-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2020/09/20/webholle/</loc>
+    
+    <lastmod>2020-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/19/qionglou/</loc>
     
     <lastmod>2020-09-29</lastmod>
     
@@ -44,21 +58,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2020/09/19/xiao/</loc>
-    
-    <lastmod>2020-09-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/photos/index.html</loc>
-    
-    <lastmod>2020-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/19/qionglou/</loc>
     
     <lastmod>2020-09-21</lastmod>
     

@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="客户端 import java.io.IOException; import java.io.OutputStreamWriter; import java.io.PrintWriter; import java.net.Socket; import java.util.Scanner;  public class ThreadClient &amp;#123;     public static voi">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768客户端import java.io.IOException;import java.io.OutputStreamWriter;import ja">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TCP多线程CS通信">
 <meta property="og:url" content="http://example.com/2020/09/29/daima/index.html">
 <meta property="og:site_name" content="鲸钰">
-<meta property="og:description" content="客户端 import java.io.IOException; import java.io.OutputStreamWriter; import java.io.PrintWriter; import java.net.Socket; import java.util.Scanner;  public class ThreadClient &amp;#123;     public static voi">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768客户端import java.io.IOException;import java.io.OutputStreamWriter;import ja">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-09-29T13:12:37.402Z">
-<meta property="article:modified_time" content="2020-09-29T13:21:09.697Z">
+<meta property="article:modified_time" content="2020-09-29T13:31:47.248Z">
 <meta property="article:author" content="李Hunk">
 <meta property="article:tag" content="代码">
 <meta name="twitter:card" content="summary">
@@ -323,7 +323,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-29 21:12:37 / Modified: 21:21:09" itemprop="dateCreated datePublished" datetime="2020-09-29T21:12:37+08:00">2020-09-29</time>
+              <time title="Created: 2020-09-29 21:12:37 / Modified: 21:31:47" itemprop="dateCreated datePublished" datetime="2020-09-29T21:12:37+08:00">2020-09-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -372,74 +372,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <pre><code class="java">客户端
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.util.Scanner;
-
-public class ThreadClient &#123;
-    public static void main(String[] args) throws IOException &#123;
-        Socket s=new Socket(&quot;127.0.0.1&quot;,9999);
-        Scanner in=new Scanner(System.in);
-        String msg=null;
-        PrintWriter out=new PrintWriter((new OutputStreamWriter(s.getOutputStream(),&quot;GBK&quot;)));
-&lt;!--more--&gt;
-        while((msg=in.nextLine())!=null)&#123;
-            out.println(msg);
-            out.flush();
-            if(msg.equals(&quot;q&quot;))&#123;
-                break;
-            &#125;
-        &#125;
-        s.close();
-    &#125;
-&#125;
----
-服务器端
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
-
-public class ThreadServer extends Thread&#123;
-    private ServerSocket ss=null;
-   public static int clientCount=0;
-    public ThreadServer()&#123;
-        try&#123;
-            ss=new ServerSocket(9999);
-        &#125;catch(IOException e)&#123;
-            System.out.println(&quot;端口绑定失败&quot;+e.getMessage());
-        &#125;
-    &#125;
-    public  static void main(String[] args) &#123;
-        ThreadServer ts = new ThreadServer();
-        ts.start();
-    &#125;
-public void run() &#123;
-    try &#123;
-        while(true)&#123;
-        Socket s = ss.accept();
-        clientCount++;
-        SocketThread socketThread=new SocketThread(s,clientCount);
-        socketThread.start();
-
-        &#125;
-    &#125;catch(IOException e)&#123;
-        e.printStackTrace();
-     &#125;
-    finally&#123;
-        if(ss!=null)&#123;
-            try&#123;
-                ss.close();
-            &#125;catch(IOException e)&#123;
-                e.printStackTrace();
-            &#125;
-
-        &#125;
-    &#125;
-   &#125;
-&#125;</code></pre>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">客户端</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStreamWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadClient</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Socket s=<span class="keyword">new</span> Socket(<span class="string">&quot;127.0.0.1&quot;</span>,<span class="number">9999</span>);</span><br><span class="line">        Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String msg=<span class="keyword">null</span>;</span><br><span class="line">        PrintWriter out=<span class="keyword">new</span> PrintWriter((<span class="keyword">new</span> OutputStreamWriter(s.getOutputStream(),<span class="string">&quot;GBK&quot;</span>)));</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">        <span class="keyword">while</span>((msg=in.nextLine())!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            out.println(msg);</span><br><span class="line">            out.flush();</span><br><span class="line">            <span class="keyword">if</span>(msg.equals(<span class="string">&quot;q&quot;</span>))&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        s.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">---</span><br><span class="line">服务器端</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.ServerSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadServer</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> ServerSocket ss=<span class="keyword">null</span>;</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> clientCount=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadServer</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            ss=<span class="keyword">new</span> ServerSocket(<span class="number">9999</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;端口绑定失败&quot;</span>+e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ThreadServer ts = <span class="keyword">new</span> ThreadServer();</span><br><span class="line">        ts.start();</span><br><span class="line">    &#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">        Socket s = ss.accept();</span><br><span class="line">        clientCount++;</span><br><span class="line">        SocketThread socketThread=<span class="keyword">new</span> SocketThread(s,clientCount);</span><br><span class="line">        socketThread.start();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">     &#125;</span><br><span class="line">    <span class="keyword">finally</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(ss!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                ss.close();</span><br><span class="line">            &#125;<span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
