@@ -1175,7 +1175,6 @@ pre code {
 .site-meta {
   flex-grow: 1;
   text-align: center;
-  background: #98f5ff;
 }
 @media (max-width: 767px) {
   .site-meta {
