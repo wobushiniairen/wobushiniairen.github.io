@@ -2,37 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2020/09/19/xiao/</loc>
+    <loc>http://example.com/2020/09/29/daima-1/</loc>
     
-    <lastmod>2020-09-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/29/daima/</loc>
+    
+    <lastmod>2020-09-29</lastmod>
     
   </url>
   
   <url>
     <loc>http://example.com/2020/09/20/dayph/</loc>
     
-    <lastmod>2020-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/20/webholle/</loc>
-    
-    <lastmod>2020-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/21/juzi/</loc>
-    
-    <lastmod>2020-09-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     
   </url>
   
   <url>
     <loc>http://example.com/2020/09/21/tu/</loc>
     
-    <lastmod>2020-09-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/20/webholle/</loc>
+    
+    <lastmod>2020-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/21/juzi/</loc>
+    
+    <lastmod>2020-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/19/xiao/</loc>
+    
+    <lastmod>2020-09-29</lastmod>
     
   </url>
   
@@ -81,7 +95,7 @@
 
   
   <url>
-    <loc>http://example.com/tag/%E6%96%87/</loc>
+    <loc>http://example.com/tag/%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -95,7 +109,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tag/%E4%BB%A3%E7%A0%81/</loc>
+    <loc>http://example.com/tag/%E6%96%87/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -118,7 +132,7 @@
 
   
   <url>
-    <loc>http://example.com/category/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>http://example.com/category/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -132,7 +146,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/category/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://example.com/category/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
