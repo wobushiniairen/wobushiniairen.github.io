@@ -2,7 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2020/09/29/daima-1/</loc>
+    
+    <lastmod>2020-11-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/20/dayph/</loc>
+    
+    <lastmod>2020-11-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2020/09/21/tu/</loc>
+    
+    <lastmod>2020-11-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/19/qionglou/</loc>
+    
+    <lastmod>2020-11-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/21/juzi/</loc>
     
     <lastmod>2020-11-10</lastmod>
     
@@ -17,41 +45,6 @@
   
   <url>
     <loc>http://example.com/baidu_verify_code-KxSv6Hmq96.html</loc>
-    
-    <lastmod>2020-09-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/19/xiao/</loc>
-    
-    <lastmod>2020-09-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/19/qionglou/</loc>
-    
-    <lastmod>2020-09-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/29/daima-1/</loc>
-    
-    <lastmod>2020-09-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/20/dayph/</loc>
-    
-    <lastmod>2020-09-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/21/juzi/</loc>
     
     <lastmod>2020-09-29</lastmod>
     
@@ -110,13 +103,6 @@
   
   <url>
     <loc>http://example.com/tag/%E6%94%B6%E8%97%8F/</loc>
-    <lastmod>2020-11-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tag/%E5%B0%8F%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2020-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
